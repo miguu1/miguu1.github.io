@@ -1,100 +1,220 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-   
-    --color1:#05AFF2;
-    --color2:#05C7F2;
-    --color3:#50ABBF;
-    --color4:#ACF2F2;
-    --color5:#F2F2F2;
+
+    --color1: #05AFF2;
+    --color2: #05C7F2;
+    --color3: #50ABBF;
+    --color4: #ACF2F2;
+    --color5: #F2F2F2;
 }
-#content{
-    width:45%;
-    margin:25px auto;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content {
+    width: 45%;
+    max-width: 900px;
+    min-width: 600px;
+    margin: 25px auto;
     background-color: var(--color2);
     box-shadow: 4px 5px 10px;
-    background: linear-gradient(to bottom right, var(--color4), var(--color1));    
+    background: linear-gradient(to bottom right, var(--color4), var(--color1));
+    padding: 10px;
 }
-#cabecera,#cursos{
+
+#cabecera {
     height: 100px;
-    padding:5px;
+    padding: 5px;
+    text-align: left;
 }
-#cabecera img{
-    height: 100%;   
+#cabecera img {
+    height: 100%;
 }
-#tareas{
+#personal {
+    min-height: 280px;
     text-align: center;
+    padding: 10px;
 }
-#personal{
-    height: 280px;
-    text-align: center ;   
-}
-#personal img{
-    height: 70%;
+#personal img {
+    height: 190px;
+    width: 190px;
+    object-fit: cover;
     border-radius: 50%;
-    padding:5px;
+    padding: 5px;
     background-color: #F2F2F2;
-    border:1px dashed red;      
+    border: 1px dashed red;
+    margin: 10px 0;
 }
-#personal h1{    
+#personal h1 {
     text-shadow: 5px 5px 10px dimgray;
 }
-#personal p{
+#personal p {
     font-style: oblique;
-    color:var(--color5);    
+    color: var(--color5);
 }
-#tareas{
-    height: 180px;     
+#tareas {
+    text-align: center;
+    min-height: 180px;
+    padding: 10px;
 }
-#tareas ul{
+#tareas p {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #F2F2F2;
+    padding: 5px;
+    margin: 5px 40px 15px;
+}
+#tareas ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-grow: 1;
-    height: 70%;  
+    gap: 6px;
 }
-#tareas li{
+#tareas li {
     list-style-type: none;
-    margin: 3px;   
-    height: 20%;   
     background-color: #F2F2F2;
-    align-content: center;   
+    min-width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
 }
-#tareas a{
-    padding:10px;
+#tareas a {
+    padding: 13px;
     text-decoration: none;
-    color:black;
-    height: 40px;    
+    color: black;
+    display: block;
+    width: 100%;
 }
-#tareas a:hover{
+#tareas a:hover {
     background-color: dimgrey;
-    color:#F2F2F2
+    color: #F2F2F2;
+    border-radius: 60px;
 }
-#tareas p{
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color:#F2F2F2;
-    padding:5px;
-    margin:5px 40px;
-}
-
-#cursos{
-    display:flex;
+#cursos {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     height: 150px;
     text-align: center;
-    
+    padding: 5px;
+    gap: 10px;
 }
-.curso{
-    margin:5px;
+.curso {
+    margin: 5px;
 }
-.curso img{
+
+.curso img {
     height: 80%;
     box-shadow: 2px 2px 5px dimgrey;
 }
-figcaption{
+figcaption {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+@media(max-width: 1024px) {
+    #content {
+        width: 70%;
+        min-width: auto;
+        margin: 20px auto;
+    }
+    #cabecera {
+        text-align: center;
+        height: 90px;
+    }
+    #personal {
+        min-height: 260px;
+    }
+    #personal h1 {
+        font-size: 30px;
+    }
+    #personal img {
+        width: 170px;
+        height: 170px;
+    }
+    #tareas {
+        min-height: auto;
+    }
+    #tareas p {
+        margin: 5px 30px 15px;
+    }
+    #tareas li {
+        min-width: 110px;
+        height: 40px;
+    }
+    #cursos {
+        height: 140px;
+        gap: 15px;
+    }
+    .curso img {
+        height: 75%;
+    }
+}
+@media (max-width: 767px) {
+    #content {
+        width: 92%;
+        min-width: auto;
+        margin: 15px auto;
+        padding: 10px;
+    }
+    #cabecera {
+        height: 80px;
+        text-align: center;
+    }
+    #cabecera img {
+        height: 100%;
+    }
+    #personal {
+        min-height: auto;
+        padding: 10px;
+    }
+    #personal h1 {
+        font-size: 24px;
+    }
+    #personal img {
+        width: 140px;
+        height: 140px;
+    }
+    #personal p {
+        font-size: 15px;
+    }
+    #tareas {
+        min-height: auto;
+        padding: 10px;
+    }
+    #tareas p {
+        margin: 5px 10px 15px;
+        font-size: 16px;
+    }
+    #tareas ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        
+    }
+    #tareas li {
+        width: 100%;
+        height: 10px;
+    }
+    #tareas a {
+        padding: 10px;
+    }
+    #cursos {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 5px;
+    }
+    .curso {
+        margin: 5px;
+    }
+    .curso img {
+        height: 80px;
+    }
+    figcaption {
+        font-size: 16px;
+    }
 }
