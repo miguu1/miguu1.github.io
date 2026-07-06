@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     --color1: #05AFF2;
     --color2: #05C7F2;
     --color3: #50ABBF;
@@ -152,7 +151,7 @@ figcaption {
         height: 75%;
     }
 }
-@media (max-width: 767px) {
+@media(max-width: 767px) {
     #content {
         width: 92%;
         min-width: auto;
@@ -190,16 +189,20 @@ figcaption {
     }
     #tareas ul {
         flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
+        align-items:first baseline;
+        margin: 20px;
         
     }
     #tareas li {
+        margin: auto;
         width: 100%;
-        height: 10px;
+        height: 40px;
     }
     #tareas a {
         padding: 10px;
+    }
+    #tareas a:hover {
+        padding: 13px;
     }
     #cursos {
         height: auto;
